@@ -6,6 +6,7 @@ import Services from '@/components/sections/services';
 import Projects from '@/components/sections/projects';
 import Team from '@/components/sections/team';
 import Contact from '@/components/sections/contact';
+import BudgetCalculator from '@/components/sections/budget-calculator';
 import { generateProjectIdeas } from '@/ai/flows/generate-project-ideas';
 import type { Project } from '@/lib/types';
 
@@ -80,6 +81,7 @@ export default async function Home() {
         <About />
         <Services />
         <Projects projects={allProjects} />
+        <BudgetCalculator />
         <Team />
         <Contact />
       </main>
