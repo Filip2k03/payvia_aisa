@@ -66,6 +66,7 @@ const translations = {
         ecommerce: 'E-commerce/Payments',
         cms: 'CMS Integration',
         ai: 'AI/Genkit Integration',
+        pos: 'POS System',
       },
       complexity: {
         title: 'Complexity',
@@ -179,6 +180,7 @@ const translations = {
         ecommerce: 'အီးကောမတ်စ်/ငွေပေးချေမှုများ',
         cms: 'CMS ပေါင်းစပ်ခြင်း',
         ai: 'AI/Genkit ပေါင်းစပ်ခြင်း',
+        pos: 'POS စနစ်',
       },
       complexity: {
         title: 'ရှုပ်ထွေးမှု',

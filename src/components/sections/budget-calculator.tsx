@@ -25,6 +25,7 @@ export default function BudgetCalculator() {
     { id: "ecommerce", label: translations.budget.features.ecommerce },
     { id: "cms", label: translations.budget.features.cms },
     { id: "ai", label: translations.budget.features.ai },
+    { id: "pos", label: translations.budget.features.pos },
   ];
 
   const handleFeatureChange = (featureId: string) => {

@@ -33,6 +33,7 @@ const prompt = ai.definePrompt({
   - E-commerce/Payments: 2,500,000 MMK
   - CMS Integration: 800,000 MMK
   - AI/Genkit Integration: 4,000,000 MMK
+  - POS System: 2,000,000 MMK
 
   Complexity Multiplier:
   - Simple: 1.0x
