@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, Code, Languages } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/mode-toggle";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 
 const navLinks = [
@@ -22,19 +21,18 @@ const navLinks = [
 ];
 
 function LanguageSwitcher() {
+  const [language, setLanguage] = useState("EN");
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === "EN" ? "MM" : "EN");
+    // Add logic here to change the actual language of the site
+  }
+
     return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                    <Languages className="h-5 w-5" />
-                    <span className="sr-only">Change language</span>
-                </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-                <DropdownMenuItem>English</DropdownMenuItem>
-                <DropdownMenuItem>Myanmar</DropdownMenuItem>
-            </DropdownMenuContent>
-        </DropdownMenu>
+        <Button variant="ghost" size="icon" onClick={toggleLanguage} className="w-auto px-3">
+            <Languages className="h-5 w-5 mr-2" />
+            <span className="font-semibold">{language}</span>
+        </Button>
     );
 }
 
@@ -92,7 +90,9 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <LanguageSwitcher />
+          <div className="hidden md:flex">
+             <LanguageSwitcher />
+          </div>
           <ModeToggle />
           <div className="md:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -107,6 +107,9 @@ export default function Header() {
                     <Code className="h-6 w-6 text-accent" />
                     <span>Payvia.asia</span>
                   </Link>
+                   <div className="border-t pt-4">
+                     <LanguageSwitcher />
+                   </div>
                   <nav className="flex flex-col gap-4">
                     {navLinks.map((link) => (
                       <a

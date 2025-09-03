@@ -13,8 +13,7 @@ export type Project = {
 
 export type Reel = {
   id: string;
-  videoUrl: string;
-  thumbnailUrl: string;
+  imageUrl: string;
   title: string;
   description: string;
 };

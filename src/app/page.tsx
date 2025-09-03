@@ -114,29 +114,25 @@ export default async function Home() {
   const reels: Reel[] = [
     {
       id: '1',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnailUrl: 'https://picsum.photos/300/500?random=1',
+      imageUrl: 'https://picsum.photos/300/500?random=1',
       title: 'Company News: WhisperX Launch',
       description: 'Check out the launch of our new earn-to-learn platform, whisperx.site!',
     },
     {
       id: '2',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnailUrl: 'https://picsum.photos/300/500?random=2',
+      imageUrl: 'https://picsum.photos/300/500?random=2',
       title: 'Logix AI Learning Sneak Peek',
       description: 'A quick look at our new AI-powered logic and algorithmics learning platform.',
     },
     {
       id: '3',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnailUrl: 'https://picsum.photos/300/500?random=3',
+      imageUrl: 'https://picsum.photos/300/500?random=3',
       title: 'Meet the Team',
       description: 'A day in the life at Payvia Solutions.',
     },
     {
       id: '4',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnailUrl: 'https://picsum.photos/300/500?random=4',
+      imageUrl: 'https://picsum.photos/300/500?random=4',
       title: 'Our Latest Project',
       description: 'Behind the scenes of our latest enterprise solution.',
     },
