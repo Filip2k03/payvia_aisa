@@ -35,61 +35,6 @@ export default async function Home() {
       budget: '2,800,000 MMK'
     },
     {
-        title: 'WhisperX - Earn to Learn Platform',
-        description: 'A gamified learning platform where users can earn rewards by completing quizzes and challenges. Features a unique prompt marketplace. Deployed at whisperx.site.',
-        image: 'https://picsum.photos/600/400?random=6',
-        link: 'https://whisperx.site',
-        image_hint: 'learning online',
-        category: 'Platforms',
-        budget: '5,000,000 MMK'
-    },
-    {
-        title: 'Logix - AI Powered Learning',
-        description: 'An innovative platform for learning logic and algorithmics with the help of AI. Deployed at logix-whisperx.vercel.app.',
-        image: 'https://picsum.photos/600/400?random=7',
-        link: 'https://logix-whisperx.vercel.app',
-        image_hint: 'ai learning',
-        category: 'Platforms',
-        budget: '4,500,000 MMK'
-    },
-    {
-        title: 'AI Business Suite',
-        description: 'A suite of AI-powered tools for businesses, enhancing productivity and decision-making. Deployed at aibussiness.vercel.app.',
-        image: 'https://picsum.photos/600/400?random=8',
-        link: 'https://aibussiness.vercel.app',
-        image_hint: 'business analytics',
-        category: 'Business Solutions',
-        budget: '4,000,000 MMK'
-    },
-    {
-        title: 'AI WhisperX',
-        description: 'Advanced AI services and solutions from WhisperX. Deployed at ai.whisperx.site.',
-        image: 'https://picsum.photos/600/400?random=9',
-        link: 'https://ai.whisperx.site',
-        image_hint: 'artificial intelligence',
-        category: 'Business Solutions',
-        budget: '3,800,000 MMK'
-    },
-    {
-        title: 'WhisperX Games',
-        description: 'A portal for exciting games developed by WhisperX. Deployed at game.whisperx.site.',
-        image: 'https://picsum.photos/600/400?random=10',
-        link: 'https://game.whisperx.site',
-        apk: '/path/to/your/game.apk',
-        image_hint: 'video game',
-        category: 'Platforms',
-        budget: '3,000,000 MMK'
-    },
-    {
-        title: 'Umnet - Russian Learning',
-        description: 'A dedicated platform for learning the Russian language. Deployed at umnet.whisperx.site.',
-        image: 'https://picsum.photos/600/400?random=11',
-        link: 'https://umnet.whisperx.site',
-        image_hint: 'language learning',
-        category: 'Platforms',
-        budget: '2,500,000 MMK'
-    },
-    {
       title: 'EduPro - Student Management System',
       description: 'An all-in-one teaching software and student management system, complete with course management, grading, and a built-in chat app for enhanced collaboration.',
       image: 'https://picsum.photos/600/400?random=4',
