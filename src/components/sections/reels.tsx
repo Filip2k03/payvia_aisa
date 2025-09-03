@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import type { Reel } from "@/lib/types";
 import React from "react";
+import { useLanguage } from "@/context/language-context";
 
 interface ReelsProps {
   reels: Reel[];
@@ -36,15 +37,16 @@ const ReelCard = ({ reel }: { reel: Reel }) => (
 );
 
 export default function Reels({ reels }: ReelsProps) {
+  const { translations } = useLanguage();
   return (
     <section id="reels" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            Our Reels
+            {translations.reels.title}
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Quick insights and behind-the-scenes looks at our latest work.
+            {translations.reels.subtitle}
           </p>
         </div>
         <Carousel

@@ -7,38 +7,35 @@ import { Button } from "@/components/ui/button";
 import { Menu, Code, Languages } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/mode-toggle";
+import { useLanguage } from "@/context/language-context";
 
-
-const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Projects", href: "#projects" },
-  { name: "Reels", href: "#reels" },
-  { name: "Budget", href: "#budget" },
-  { name: "Team", href: "#team" },
-  { name: "Feedback", href: "#feedback" },
-  { name: "Contact", href: "#contact" },
-];
 
 function LanguageSwitcher() {
-  const [language, setLanguage] = useState("EN");
+  const { language, toggleLanguage, translations } = useLanguage();
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === "EN" ? "MM" : "EN");
-    // Add logic here to change the actual language of the site
-  }
-
-    return (
-        <Button variant="ghost" size="icon" onClick={toggleLanguage} className="w-auto px-3">
-            <Languages className="h-5 w-5 mr-2" />
-            <span className="font-semibold">{language}</span>
-        </Button>
-    );
+  return (
+      <Button variant="ghost" size="icon" onClick={toggleLanguage} className="w-auto px-3">
+          <Languages className="h-5 w-5 mr-2" />
+          <span className="font-semibold">{language.toUpperCase()}</span>
+      </Button>
+  );
 }
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { translations } = useLanguage();
+
+  const navLinks = [
+    { name: translations.header.about, href: "#about" },
+    { name: translations.header.services, href: "#services" },
+    { name: translations.header.projects, href: "#projects" },
+    { name: translations.header.reels, href: "#reels" },
+    { name: translations.header.budget, href: "#budget" },
+    { name: translations.header.team, href: "#team" },
+    { name: translations.header.feedback, href: "#feedback" },
+    { name: translations.header.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {

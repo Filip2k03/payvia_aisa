@@ -7,6 +7,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/componen
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { chat } from "@/ai/flows/chat";
+import { useLanguage } from "@/context/language-context";
 
 type Message = {
   role: "user" | "model";
@@ -15,8 +16,9 @@ type Message = {
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const { translations } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([
-    { role: "model", content: "Hello! How can we help you today?" },
+    { role: "model", content: translations.chat.welcome },
   ]);
   const [input, setInput] = useState("");
   const [isPending, startTransition] = useTransition();
@@ -52,7 +54,7 @@ export default function ChatWidget() {
 
       <Card className={cn("fixed bottom-4 right-4 z-50 w-80 shadow-lg transition-transform duration-300 ease-in-out", isOpen ? "scale-100" : "scale-0")}>
         <CardHeader className="flex flex-row items-center justify-between bg-primary text-primary-foreground p-4">
-          <CardTitle className="text-lg">Chat Support</CardTitle>
+          <CardTitle className="text-lg">{translations.chat.title}</CardTitle>
           <Button variant="ghost" size="icon" className="h-8 w-8 text-primary-foreground hover:bg-primary/80" onClick={() => setIsOpen(false)}>
             <X className="h-5 w-5" />
           </Button>
@@ -84,7 +86,7 @@ export default function ChatWidget() {
         <CardFooter className="p-2 border-t">
           <form onSubmit={handleSubmit} className="flex w-full items-center gap-2">
             <Input
-              placeholder="Type a message..."
+              placeholder={translations.chat.placeholder}
               className="flex-1"
               value={input}
               onChange={(e) => setInput(e.target.value)}

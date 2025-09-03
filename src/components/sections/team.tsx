@@ -1,19 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 const teamMembers = [
   {
     name: "Filip",
-    role: "CEO & Full Stack Developer",
+    roleKey: "ceo",
     avatar: "https://picsum.photos/100/100?random=7",
     avatar_hint: "male portrait",
     profileUrl: "https://techyyfilip.vercel.app",
   },
   {
     name: "Zaw Naing Win",
-    role: "Marketing Manager & Frontend Developer",
+    roleKey: "marketing",
     avatar: "https://picsum.photos/100/100?random=8",
     avatar_hint: "male portrait",
     profileUrl: "#",
@@ -21,15 +24,16 @@ const teamMembers = [
 ];
 
 export default function Team() {
+  const { translations } = useLanguage();
   return (
     <section id="team" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            Meet Our Leadership
+            {translations.team.title}
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            The driving force behind our innovation and success.
+            {translations.team.subtitle}
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -46,11 +50,11 @@ export default function Team() {
                 />
                 <div className="text-center sm:text-left">
                   <CardTitle>{member.name}</CardTitle>
-                  <CardDescription className="mt-1 text-accent font-medium">{member.role}</CardDescription>
+                  <CardDescription className="mt-1 text-accent font-medium">{translations.team.roles[member.roleKey]}</CardDescription>
                   {member.profileUrl !== "#" && (
                     <Button variant="ghost" size="sm" asChild className="mt-2 -ml-3">
                       <a href={member.profileUrl} target="_blank" rel="noopener noreferrer">
-                        View Profile <ArrowUpRight className="ml-1 h-4 w-4" />
+                        {translations.team.viewProfile} <ArrowUpRight className="ml-1 h-4 w-4" />
                       </a>
                     </Button>
                   )}

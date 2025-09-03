@@ -9,18 +9,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
+  const { translations } = useLanguage();
   return (
     <Button type="submit" disabled={pending} className="w-full">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-      Send Message
+      {translations.contact.button}
     </Button>
   );
 }
 
 export default function Contact() {
+  const { translations } = useLanguage();
   const initialState: ContactFormState = { success: false, message: "" };
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
@@ -40,29 +43,29 @@ export default function Contact() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            Get in Touch
+            {translations.contact.title}
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Have a project in mind? We'd love to hear from you.
+            {translations.contact.subtitle}
           </p>
         </div>
         <div className="mt-12 max-w-xl mx-auto">
           <form action={formAction} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
-              <Input id="name" name="name" type="text" placeholder="John Doe" required />
+              <Label htmlFor="name">{translations.contact.name}</Label>
+              <Input id="name" name="name" type="text" placeholder={translations.contact.namePlaceholder} required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
-              <Input id="email" name="email" type="email" placeholder="john@example.com" required />
+              <Label htmlFor="email">{translations.contact.email}</Label>
+              <Input id="email" name="email" type="email" placeholder={translations.contact.emailPlaceholder} required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="subject">Subject</Label>
-              <Input id="subject" name="subject" type="text" placeholder="Project Inquiry" required />
+              <Label htmlFor="subject">{translations.contact.subject}</Label>
+              <Input id="subject" name="subject" type="text" placeholder={translations.contact.subjectPlaceholder} required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea id="message" name="message" placeholder="Tell us about your project..." rows={5} required />
+              <Label htmlFor="message">{translations.contact.message}</Label>
+              <Textarea id="message" name="message" placeholder={translations.contact.messagePlaceholder} rows={5} required />
             </div>
             <SubmitButton />
           </form>
