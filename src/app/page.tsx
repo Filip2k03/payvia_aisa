@@ -27,6 +27,14 @@ export default async function Home() {
       budget: '3,500,000 MMK'
     },
     {
+      title: 'PUE - Point of Sale System',
+      description: 'A modern Point of Sale (POS) solution for retail and service businesses, designed to streamline transactions, manage inventory, and track sales performance with an intuitive interface.',
+      image: 'https://picsum.photos/600/400?random=5',
+      image_hint: 'pos terminal',
+      category: 'Business Solutions',
+      budget: '2,800,000 MMK'
+    },
+    {
         title: 'WhisperX - Earn to Learn Platform',
         description: 'A gamified learning platform where users can earn rewards by completing quizzes and challenges. Features a unique prompt marketplace. Deployed at whisperx.site.',
         image: 'https://picsum.photos/600/400?random=6',
