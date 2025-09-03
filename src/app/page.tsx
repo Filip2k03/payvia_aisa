@@ -8,7 +8,10 @@ import Team from '@/components/sections/team';
 import Contact from '@/components/sections/contact';
 import BudgetCalculator from '@/components/sections/budget-calculator';
 import { generateProjectIdeas } from '@/ai/flows/generate-project-ideas';
-import type { Project } from '@/lib/types';
+import type { Project, Reel } from '@/lib/types';
+import WelcomePopup from '@/components/welcome-popup';
+import Feedback from '@/components/sections/feedback';
+import Reels from '@/components/sections/reels';
 
 export default async function Home() {
   const companyDescription = `Payvia Solutions is a software company specializing in custom software development, Android & iOS apps, and web applications using modern tools like PHP, Python, Django, React, Vite, DevOps, and advanced database solutions. Payvia excels at enterprise software and innovative tech projects.`;
@@ -24,21 +27,59 @@ export default async function Home() {
       budget: '3,500,000 MMK'
     },
     {
-      title: 'MBLogistics - Customer Portal',
-      description: 'A user-friendly portal for customers of mblogistics.express to track shipments, manage orders, and communicate with support.',
-      image: 'https://picsum.photos/600/400?random=2',
-      link: 'https://customer.mblogistics.express',
-      image_hint: 'customer service',
-      category: 'Logistics & CMS',
-      budget: '1,500,000 MMK'
+        title: 'WhisperX - Earn to Learn Platform',
+        description: 'A gamified learning platform where users can earn rewards by completing quizzes and challenges. Features a unique prompt marketplace. Deployed at whisperx.site.',
+        image: 'https://picsum.photos/600/400?random=6',
+        link: 'https://whisperx.site',
+        image_hint: 'learning online',
+        category: 'Platforms',
+        budget: '5,000,000 MMK'
     },
     {
-      title: 'MBLogistics - Point of Sale (POS)',
-      description: 'A custom POS solution designed for the logistics industry, streamlining transactions and integrating with the main logistics platform.',
-      image: 'https://picsum.photos/600/400?random=3',
-      image_hint: 'pos terminal',
-      category: 'Logistics & CMS',
-      budget: '2,000,000 MMK'
+        title: 'Logix - AI Powered Learning',
+        description: 'An innovative platform for learning logic and algorithmics with the help of AI. Deployed at logix-whisperx.vercel.app.',
+        image: 'https://picsum.photos/600/400?random=7',
+        link: 'https://logix-whisperx.vercel.app',
+        image_hint: 'ai learning',
+        category: 'Platforms',
+        budget: '4,500,000 MMK'
+    },
+    {
+        title: 'AI Business Suite',
+        description: 'A suite of AI-powered tools for businesses, enhancing productivity and decision-making. Deployed at aibussiness.vercel.app.',
+        image: 'https://picsum.photos/600/400?random=8',
+        link: 'https://aibussiness.vercel.app',
+        image_hint: 'business analytics',
+        category: 'Business Solutions',
+        budget: '4,000,000 MMK'
+    },
+    {
+        title: 'AI WhisperX',
+        description: 'Advanced AI services and solutions from WhisperX. Deployed at ai.whisperx.site.',
+        image: 'https://picsum.photos/600/400?random=9',
+        link: 'https://ai.whisperx.site',
+        image_hint: 'artificial intelligence',
+        category: 'Business Solutions',
+        budget: '3,800,000 MMK'
+    },
+    {
+        title: 'WhisperX Games',
+        description: 'A portal for exciting games developed by WhisperX. Deployed at game.whisperx.site.',
+        image: 'https://picsum.photos/600/400?random=10',
+        link: 'https://game.whisperx.site',
+        apk: '/path/to/your/game.apk',
+        image_hint: 'video game',
+        category: 'Platforms',
+        budget: '3,000,000 MMK'
+    },
+    {
+        title: 'Umnet - Russian Learning',
+        description: 'A dedicated platform for learning the Russian language. Deployed at umnet.whisperx.site.',
+        image: 'https://picsum.photos/600/400?random=11',
+        link: 'https://umnet.whisperx.site',
+        image_hint: 'language learning',
+        category: 'Platforms',
+        budget: '2,500,000 MMK'
     },
     {
       title: 'EduPro - Student Management System',
@@ -48,34 +89,17 @@ export default async function Home() {
       category: 'Business Solutions',
       budget: '4,000,000 MMK'
     },
-    {
-      title: 'ConnectSphere - Real-time Chat App',
-      description: 'A standalone, scalable real-time communication solution for businesses and communities, featuring end-to-end encryption and rich media support.',
-      image: 'https://picsum.photos/600/400?random=5',
-      image_hint: 'chat bubbles',
-      category: 'Business Solutions',
-      budget: '2,500,000 MMK'
-    },
-    {
-      title: 'WhisperX - Earn to Learn Platform',
-      description: 'A gamified learning platform where users can earn rewards by completing quizzes and challenges. Features a unique prompt marketplace. Deployed at whisperx.site.',
-      image: 'https://picsum.photos/600/400?random=6',
-      link: 'https://whisperx.site',
-      image_hint: 'learning online',
-      category: 'Platforms',
-      budget: '5,000,000 MMK'
-    },
   ];
 
   let generatedProjects: Project[] = [];
   try {
     const ideas = await generateProjectIdeas({
       companyDescription,
-      numberOfProjects: 20,
+      numberOfProjects: 10,
     });
     generatedProjects = ideas.map((idea, index) => ({
       ...idea,
-      image: `https://picsum.photos/600/400?random=${index + 7}`,
+      image: `https://picsum.photos/600/400?random=${index + 12}`,
       image_hint: 'software code',
       category: index % 2 === 0 ? 'Business Solutions' : 'Platforms',
       budget: `${((Math.floor(Math.random() * 40) + 10) * 100000).toLocaleString()} MMK`
@@ -87,16 +111,50 @@ export default async function Home() {
 
   const allProjects = [...staticProjects, ...generatedProjects];
 
+  const reels: Reel[] = [
+    {
+      id: '1',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      thumbnailUrl: 'https://picsum.photos/300/500?random=1',
+      title: 'Company News: WhisperX Launch',
+      description: 'Check out the launch of our new earn-to-learn platform, whisperx.site!',
+    },
+    {
+      id: '2',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      thumbnailUrl: 'https://picsum.photos/300/500?random=2',
+      title: 'Logix AI Learning Sneak Peek',
+      description: 'A quick look at our new AI-powered logic and algorithmics learning platform.',
+    },
+    {
+      id: '3',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      thumbnailUrl: 'https://picsum.photos/300/500?random=3',
+      title: 'Meet the Team',
+      description: 'A day in the life at Payvia Solutions.',
+    },
+    {
+      id: '4',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      thumbnailUrl: 'https://picsum.photos/300/500?random=4',
+      title: 'Our Latest Project',
+      description: 'Behind the scenes of our latest enterprise solution.',
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col">
+      <WelcomePopup />
       <Header />
       <main className="flex-1">
         <Hero />
         <About />
         <Services />
         <Projects projects={allProjects} />
+        <Reels reels={reels} />
         <BudgetCalculator />
         <Team />
+        <Feedback />
         <Contact />
       </main>
       <Footer />

@@ -6,8 +6,17 @@ export type Project = {
   image: string;
   image_hint: string;
   link?: string;
+  apk?: string;
   category: string;
   budget?: string;
+};
+
+export type Reel = {
+  id: string;
+  videoUrl: string;
+  thumbnailUrl: string;
+  title: string;
+  description: string;
 };
 
 export const BudgetInputSchema = z.object({
