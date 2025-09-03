@@ -5,7 +5,7 @@ const translations = {
       about: 'About',
       services: 'Services',
       projects: 'Projects',
-      reels: 'Reels',
+      posts: 'Posts',
       budget: 'Budget',
       team: 'Team',
       feedback: 'Feedback',
@@ -44,8 +44,8 @@ const translations = {
         platforms: "Platforms"
       }
     },
-    reels: {
-        title: "Our Reels",
+    posts: {
+        title: "Our Posts",
         subtitle: "Quick insights and behind-the-scenes looks at our latest work."
     },
     budget: {
@@ -118,7 +118,7 @@ const translations = {
       about: 'ကျွန်ုပ်တို့အကြောင်း',
       services: 'ဝန်ဆောင်မှုများ',
       projects: 'ပရောဂျက်များ',
-      reels: 'Reels',
+      posts: 'ပို့စ်များ',
       budget: 'ဘတ်ဂျက်',
       team: 'အဖွဲ့',
       feedback: 'သုံးသပ်ချက်',
@@ -157,8 +157,8 @@ const translations = {
             platforms: "ပလက်ဖောင်းများ"
         }
     },
-    reels: {
-        title: "ကျွန်ုပ်တို့၏ Reels",
+    posts: {
+        title: "ကျွန်ုပ်တို့၏ ပို့စ်များ",
         subtitle: "ကျွန်ုပ်တို့၏နောက်ဆုံးအလုပ်များအကြောင်း လျင်မြန်သောအတွင်းကျကျအချက်အလက်များနှင့် နောက်ကွယ်မှမြင်ကွင်းများ။"
     },
     budget: {

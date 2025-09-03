@@ -30,7 +30,7 @@ export default function Header() {
     { name: translations.header.about, href: "#about" },
     { name: translations.header.services, href: "#services" },
     { name: translations.header.projects, href: "#projects" },
-    { name: translations.header.reels, href: "#reels" },
+    { name: translations.header.posts, href: "#posts" },
     { name: translations.header.budget, href: "#budget" },
     { name: translations.header.team, href: "#team" },
     { name: translations.header.feedback, href: "#feedback" },

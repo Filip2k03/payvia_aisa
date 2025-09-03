@@ -8,10 +8,10 @@ import Team from '@/components/sections/team';
 import Contact from '@/components/sections/contact';
 import BudgetCalculator from '@/components/sections/budget-calculator';
 import { generateProjectIdeas } from '@/ai/flows/generate-project-ideas';
-import type { Project, Reel } from '@/lib/types';
+import type { Project, Post } from '@/lib/types';
 import WelcomePopup from '@/components/welcome-popup';
 import Feedback from '@/components/sections/feedback';
-import Reels from '@/components/sections/reels';
+import Posts from '@/components/sections/posts';
 
 export default async function Home() {
   const companyDescription = `Payvia Solutions is a software company specializing in custom software development, Android & iOS apps, and web applications using modern tools like PHP, Python, Django, React, Vite, DevOps, and advanced database solutions. Payvia excels at enterprise software and innovative tech projects.`;
@@ -111,7 +111,7 @@ export default async function Home() {
 
   const allProjects = [...staticProjects, ...generatedProjects];
 
-  const reels: Reel[] = [
+  const posts: Post[] = [
     {
       id: '1',
       imageUrl: 'https://picsum.photos/300/500?random=1',
@@ -147,7 +147,7 @@ export default async function Home() {
         <About />
         <Services />
         <Projects projects={allProjects} />
-        <Reels reels={reels} />
+        <Posts posts={posts} />
         <BudgetCalculator />
         <Team />
         <Feedback />
