@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, Code } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -58,34 +59,37 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div className="md:hidden">
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col gap-6 p-6">
-                <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary">
-                  <Code className="h-6 w-6 text-accent" />
-                  <span>Payvia.asia</span>
-                </Link>
-                <nav className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      onClick={(e) => handleLinkClick(e, link.href)}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+        <div className="flex items-center gap-2">
+          <ModeToggle />
+          <div className="md:hidden">
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="flex flex-col gap-6 p-6">
+                  <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary">
+                    <Code className="h-6 w-6 text-accent" />
+                    <span>Payvia.asia</span>
+                  </Link>
+                  <nav className="flex flex-col gap-4">
+                    {navLinks.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
+                        className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

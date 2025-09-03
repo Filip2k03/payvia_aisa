@@ -6,6 +6,8 @@ export type Project = {
   image: string;
   image_hint: string;
   link?: string;
+  category: string;
+  budget?: string;
 };
 
 export const BudgetInputSchema = z.object({

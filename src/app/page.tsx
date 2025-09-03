@@ -15,11 +15,13 @@ export default async function Home() {
   
   const staticProjects: Project[] = [
     {
-      title: 'MBLogistics - Enterprise Logistics Platform',
-      description: 'A comprehensive logistics management system for mblogistics.express, featuring real-time tracking, inventory management, and integrated chat for seamless communication.',
+      title: 'MBLogistics - Enterprise Logistics & CMS Platform',
+      description: 'A comprehensive logistics management system and CMS for mblogistics.express, featuring real-time tracking, inventory management, and integrated chat for seamless communication.',
       image: 'https://picsum.photos/600/400?random=1',
       link: 'https://mblogistics.express',
       image_hint: 'logistics truck',
+      category: 'Logistics & CMS',
+      budget: '3,500,000 MMK'
     },
     {
       title: 'MBLogistics - Customer Portal',
@@ -27,24 +29,32 @@ export default async function Home() {
       image: 'https://picsum.photos/600/400?random=2',
       link: 'https://customer.mblogistics.express',
       image_hint: 'customer service',
+      category: 'Logistics & CMS',
+      budget: '1,500,000 MMK'
     },
     {
       title: 'MBLogistics - Point of Sale (POS)',
       description: 'A custom POS solution designed for the logistics industry, streamlining transactions and integrating with the main logistics platform.',
       image: 'https://picsum.photos/600/400?random=3',
       image_hint: 'pos terminal',
+      category: 'Logistics & CMS',
+      budget: '2,000,000 MMK'
     },
     {
       title: 'EduPro - Student Management System',
       description: 'An all-in-one teaching software and student management system, complete with course management, grading, and a built-in chat app for enhanced collaboration.',
       image: 'https://picsum.photos/600/400?random=4',
       image_hint: 'education classroom',
+      category: 'Business Solutions',
+      budget: '4,000,000 MMK'
     },
     {
       title: 'ConnectSphere - Real-time Chat App',
       description: 'A standalone, scalable real-time communication solution for businesses and communities, featuring end-to-end encryption and rich media support.',
       image: 'https://picsum.photos/600/400?random=5',
       image_hint: 'chat bubbles',
+      category: 'Business Solutions',
+      budget: '2,500,000 MMK'
     },
     {
       title: 'WhisperX - Earn to Learn Platform',
@@ -52,6 +62,8 @@ export default async function Home() {
       image: 'https://picsum.photos/600/400?random=6',
       link: 'https://whisperx.site',
       image_hint: 'learning online',
+      category: 'Platforms',
+      budget: '5,000,000 MMK'
     },
   ];
 
@@ -65,6 +77,8 @@ export default async function Home() {
       ...idea,
       image: `https://picsum.photos/600/400?random=${index + 7}`,
       image_hint: 'software code',
+      category: index % 2 === 0 ? 'Business Solutions' : 'Platforms',
+      budget: `${((Math.floor(Math.random() * 40) + 10) * 100000).toLocaleString()} MMK`
     }));
   } catch (error) {
     console.error('Failed to generate project ideas:', error);
