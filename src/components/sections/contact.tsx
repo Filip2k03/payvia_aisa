@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Loader2 } from "lucide-react";
+import { Loader2, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 function SubmitButton() {
@@ -49,6 +49,22 @@ export default function Contact() {
             {translations.contact.subtitle}
           </p>
         </div>
+
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg">
+                <a href="tel:+959123456789">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Now
+                </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+                <a href="mailto:contact@payvia.asia">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Email Now
+                </a>
+            </Button>
+        </div>
+
         <div className="mt-12 max-w-xl mx-auto">
           <form action={formAction} className="space-y-6">
             <div className="space-y-2">
