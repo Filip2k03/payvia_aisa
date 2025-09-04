@@ -71,7 +71,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl text-primary">
           <Code className="h-7 w-7 text-accent" />
-          <span>Payvia.asia</span>
+          <span>Payvia</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
@@ -102,7 +102,7 @@ export default function Header() {
                 <div className="flex flex-col gap-6 p-6">
                   <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary">
                     <Code className="h-6 w-6 text-accent" />
-                    <span>Payvia.asia</span>
+                    <span>Payvia</span>
                   </Link>
                    <div className="border-t pt-4">
                      <LanguageSwitcher />

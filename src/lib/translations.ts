@@ -13,13 +13,13 @@ const translations = {
     },
     hero: {
       title: 'Building the Future of Software',
-      subtitle: 'Payvia Solutions crafts bespoke software, mobile apps, and web platforms that drive innovation and efficiency for businesses worldwide.',
+      subtitle: 'Payvia crafts bespoke software, mobile apps, and web platforms that drive innovation and efficiency for businesses worldwide.',
       cta1: 'Get In Touch',
       cta2: 'Our Work',
     },
     about: {
-      title: 'About Payvia Solutions',
-      p1: 'Payvia Solutions is a dynamic software development company dedicated to delivering high-quality, scalable, and innovative technology solutions. We partner with businesses to transform their ideas into reality, from complex enterprise systems to user-friendly mobile applications.',
+      title: 'About Payvia',
+      p1: 'Payvia is a dynamic software development company dedicated to delivering high-quality, scalable, and innovative technology solutions. We partner with businesses to transform their ideas into reality, from complex enterprise systems to user-friendly mobile applications.',
       p2: 'Our expertise spans across a wide range of modern technologies, including PHP, Python, Django, React, and Vite. With a strong focus on DevOps practices and advanced database architecture, we ensure our solutions are not only powerful but also robust and secure.',
       imageAlt: 'Team working on a project',
     },
@@ -109,7 +109,7 @@ const translations = {
         placeholder: "Type a message..."
     },
     welcome: {
-        title: "Welcome to Payvia Solutions!",
+        title: "Welcome to Payvia!",
         description: "We are thrilled to have you here. Explore our innovative software solutions and see how we can help bring your ideas to life.",
         button: "Get Started"
     }
@@ -127,13 +127,13 @@ const translations = {
     },
     hero: {
       title: 'ဆော့ဖ်ဝဲ၏အနာဂတ်ကိုတည်ဆောက်ခြင်း',
-      subtitle: 'Payvia Solutions သည် ကမ္ဘာတစ်ဝှမ်းရှိ စီးပွားရေးလုပ်ငန်းများအတွက် ဆန်းသစ်တီထွင်မှုနှင့် စွမ်းဆောင်ရည်ကို မြှင့်တင်ပေးသည့် စိတ်ကြိုက်ဆော့ဖ်ဝဲများ၊ မိုဘိုင်းအက်ပ်များနှင့် ဝဘ်ပလက်ဖောင်းများကို ဖန်တီးပေးပါသည်။',
+      subtitle: 'Payvia သည် ကမ္ဘာတစ်ဝှမ်းရှိ စီးပွားရေးလုပ်ငန်းများအတွက် ဆန်းသစ်တီထွင်မှုနှင့် စွမ်းဆောင်ရည်ကို မြှင့်တင်ပေးသည့် စိတ်ကြိုက်ဆော့ဖ်ဝဲများ၊ မိုဘိုင်းအက်ပ်များနှင့် ဝဘ်ပလက်ဖောင်းများကို ဖန်တီးပေးပါသည်။',
       cta1: 'ဆက်သွယ်ရန်',
       cta2: 'ကျွန်ုပ်တို့၏အလုပ်',
     },
     about: {
-      title: 'Payvia Solutions အကြောင်း',
-      p1: 'Payvia Solutions သည် အရည်အသွေးမြင့်၊ ချဲ့ထွင်နိုင်သော၊ နှင့် ဆန်းသစ်သောနည်းပညာဖြေရှင်းချက်များကို ပေးအပ်ရန် ရည်စူးထားသော တက်ကြွသောဆော့ဖ်ဝဲဖွံ့ဖြိုးတိုးတက်ရေးကုမ္ပဏီတစ်ခုဖြစ်သည်။ ကျွန်ုပ်တို့သည် ရှုပ်ထွေးသောလုပ်ငန်းစနစ်များမှသည် အသုံးပြုရလွယ်ကူသောမိုဘိုင်းအက်ပလီကေးရှင်းများအထိ စီးပွားရေးလုပ်ငန်းများနှင့် ပူးပေါင်း၍ သူတို့၏စိတ်ကူးများကို အကောင်အထည်ဖော်ပေးပါသည်။',
+      title: 'Payvia အကြောင်း',
+      p1: 'Payvia သည် အရည်အသွေးမြင့်၊ ချဲ့ထွင်နိုင်သော၊ နှင့် ဆန်းသစ်သောနည်းပညာဖြေရှင်းချက်များကို ပေးအပ်ရန် ရည်စူးထားသော တက်ကြွသောဆော့ဖ်ဝဲဖွံ့ဖြိုးတိုးတက်ရေးကုမ္ပဏီတစ်ခုဖြစ်သည်။ ကျွန်ုပ်တို့သည် ရှုပ်ထွေးသောလုပ်ငန်းစနစ်များမှသည် အသုံးပြုရလွယ်ကူသောမိုဘိုင်းအက်ပလီကေးရှင်းများအထိ စီးပွားရေးလုပ်ငန်းများနှင့် ပူးပေါင်း၍ သူတို့၏စိတ်ကူးများကို အကောင်အထည်ဖော်ပေးပါသည်။',
       p2: 'ကျွန်ုပ်တို့၏ကျွမ်းကျင်မှုသည် PHP, Python, Django, React, နှင့် Vite အပါအဝင် ခေတ်မီနည်းပညာများစွာကို လွှမ်းခြုံထားသည်။ DevOps အလေ့အကျင့်များနှင့် အဆင့်မြင့်ဒေတာဘေ့စ်ဗိသုကာကို အလေးထားခြင်းဖြင့် ကျွန်ုပ်တို့၏ဖြေရှင်းချက်များသည် အစွမ်းထက်ရုံသာမက ခိုင်မာပြီး လုံခြုံမှုရှိစေရန် သေချာစေပါသည်။',
       imageAlt: 'ပရောဂျက်တစ်ခုတွင် အလုပ်လုပ်နေသောအဖွဲ့',
     },
@@ -223,7 +223,7 @@ const translations = {
         placeholder: "စာတိုတစ်စောင်ရိုက်ထည့်ပါ..."
     },
     welcome: {
-        title: "Payvia Solutions မှကြိုဆိုပါတယ်။",
+        title: "Payvia မှကြိုဆိုပါတယ်။",
         description: "သင့်ကိုဒီမှာကြိုဆိုရတာ အရမ်းဝမ်းသာပါတယ်။ ကျွန်ုပ်တို့၏ ဆန်းသစ်သော ဆော့ဖ်ဝဲဖြေရှင်းချက်များကို ရှာဖွေပြီး သင့်စိတ်ကူးများကို အသက်ဝင်လာအောင် ဘယ်လိုကူညီပေးနိုင်မလဲဆိုတာ ကြည့်လိုက်ပါ။",
         button: "စတင်လိုက်ပါ"
     }

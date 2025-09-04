@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
-  title: 'Payvia Solutions Hub',
+  title: 'Payvia',
   description: 'Professional and modern solutions for custom software, mobile apps, and web applications.',
 };
 

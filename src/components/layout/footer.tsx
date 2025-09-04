@@ -28,7 +28,7 @@ export default function Footer() {
                 ))}
             </div>
             <p className="text-center text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} Payvia Solutions. All rights reserved.
+                &copy; {new Date().getFullYear()} Payvia. All rights reserved.
             </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ import Feedback from '@/components/sections/feedback';
 import Posts from '@/components/sections/posts';
 
 export default async function Home() {
-  const companyDescription = `Payvia Solutions is a software company specializing in custom software development, Android & iOS apps, and web applications using modern tools like PHP, Python, Django, React, Vite, DevOps, and advanced database solutions. Payvia excels at enterprise software and innovative tech projects.`;
+  const companyDescription = `Payvia is a software company specializing in custom software development, Android & iOS apps, and web applications using modern tools like PHP, Python, Django, React, Vite, DevOps, and advanced database solutions. Payvia excels at enterprise software and innovative tech projects.`;
   
   const staticProjects: Project[] = [
     {
@@ -81,7 +81,7 @@ export default async function Home() {
       id: '3',
       imageUrl: 'https://picsum.photos/300/500?random=3',
       title: 'Meet the Team',
-      description: 'A day in the life at Payvia Solutions.',
+      description: 'A day in the life at Payvia.',
     },
     {
       id: '4',

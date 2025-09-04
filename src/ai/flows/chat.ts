@@ -15,7 +15,7 @@ const prompt = ai.definePrompt({
   name: 'chatPrompt',
   input: {schema: ChatInputSchema},
   output: {schema: ChatOutputSchema},
-  prompt: `You are a helpful and friendly customer support assistant for Payvia Solutions, a software company.
+  prompt: `You are a helpful and friendly customer support assistant for Payvia, a software company.
 Your role is to answer user questions about the company, its services, and technology.
 Be concise and helpful.
 
