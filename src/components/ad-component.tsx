@@ -1,3 +1,4 @@
+
 // Ad Component
 export default function AdComponent() {
   return (
@@ -7,7 +8,7 @@ export default function AdComponent() {
             <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Advertisement</h2>
             
             {/* The clickable ad link. It wraps the SVG logo. */}
-            <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className="group block cursor-pointer" aria-label="Visit Next.js to learn more">
+            <a href="https://whisperx.site" target="_blank" rel="noopener noreferrer" className="group block cursor-pointer" aria-label="Visit WhisperX to learn more">
                 
                 {/* Custom SVG Logo for WhisperX */}
                 <svg width="100%" height="auto" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300 ease-in-out group-hover:scale-105">
@@ -39,7 +40,7 @@ export default function AdComponent() {
             </a>
 
             <p className="mt-4 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                Click the logo to discover the power of Next.js
+                Click the logo to start earning while you learn.
             </p>
         </div>
     </div>
