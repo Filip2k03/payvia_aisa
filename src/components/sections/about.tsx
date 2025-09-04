@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/context/language-context";
+import AdComponent from "../ad-component";
 
 export default function About() {
   const { translations } = useLanguage();
@@ -35,6 +36,9 @@ export default function About() {
               </CardContent>
             </Card>
           </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+            <AdComponent />
         </div>
       </div>
     </section>
