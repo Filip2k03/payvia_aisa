@@ -18,7 +18,7 @@ export default async function Home() {
   
   const staticProjects: Project[] = [
     {
-      title: 'MBLogistics - Enterprise Logistics & CMS Platform',
+      title: 'MBLogistics - Enterprise Logistics & CMS',
       description: 'A comprehensive logistics management system and CMS for mblogistics.express, featuring real-time tracking, inventory management, and integrated chat for seamless communication.',
       image: 'https://picsum.photos/600/400?random=1',
       link: 'https://mblogistics.express',
