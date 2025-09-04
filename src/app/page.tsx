@@ -20,9 +20,9 @@ export default async function Home() {
     {
       title: 'MBLogistics - Enterprise Logistics & CMS',
       description: 'A comprehensive logistics management system and CMS for mblogistics.express, featuring real-time tracking, inventory management, and integrated chat for seamless communication.',
-      image: 'https://picsum.photos/600/400?random=1',
+      image: 'https://picsum.photos/600/400?random=21',
       link: 'https://mblogistics.express',
-      image_hint: 'logistics truck',
+      image_hint: 'logistics dashboard',
       category: 'Logistics & CMS',
       budget: '3,500,000 MMK'
     },
